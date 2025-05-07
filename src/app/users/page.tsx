@@ -20,10 +20,12 @@ export default function UsersPage() {
 
   return (
     <div className="p-4  mx-auto bg-white/60 backdrop-blur-md rounded-2xl shadow-md">
-      <h1 className="text-2xl font-bold mb-4">User List</h1>
+      <h1 className="text-2xl flex justify-center  font-bold mb-4">User List</h1>
       <ul className="space-y-2">
         {users.map(user => (
-          <li key={user.id} className="p-4 border rounded hover:bg-gray-100">
+          <li
+          key={user.id}
+          className="p-4 border rounded-full hover:bg-gray-100 transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer">
             <Link href={`/users/${user.id}`}>
               <div>
                 <p className="font-semibold">{user.name}</p>
