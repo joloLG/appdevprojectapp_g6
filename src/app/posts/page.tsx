@@ -41,7 +41,7 @@ export default function PostsPage() {
       <h1 className="text-3xl  flex justify-center font-bold mb-4">Posts</h1>
       <ul className="space-y-4">
         {posts.map(post => (
-          <li key={post.id} className="border p-4 rounded hover:bg-gray-50 transition">
+          <li key={post.id} className="border p-4 rounded hover:bg-gray-50 transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer">
             <Link href={`/posts/${post.id}`}>
               <h2 className="text-xl font-semibold">{post.title}</h2>
               <p className="text-gray-600 line-clamp-2">{post.body}</p>
