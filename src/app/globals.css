@@ -28,8 +28,6 @@ body {
   padding-top: 20px;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  background: #000000; /* Fallback */
-  background: linear-gradient(90deg, #000000 0%, #555555 50%, #CCCCCC 100%);
+  background: #a05075;
 }
-
 
