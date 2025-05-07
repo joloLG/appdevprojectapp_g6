@@ -94,7 +94,7 @@ export default function MyPostPage() {
 
   return (
     <div className="p-6 max-w-4xl mx-auto space-y-6">
-      <h1 className="text-3xl font-bold mb-4">Welcome, {user.name}</h1>
+      <h1 className="text-3xl flex justify-center font-bold mb-4">Welcome, {user.name}</h1>
 
       <section>
         <h2 className="text-2xl font-semibold mb-2">Your Posts</h2>
@@ -125,7 +125,7 @@ export default function MyPostPage() {
                       {comments
                         .filter(comment => comment.postId === post.id)
                         .map(comment => (
-                          <div key={comment.id} className="border p-3 rounded bg-gray-50">
+                          <div key={comment.id} className="border p-3 rounded bg-gray-50 transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer">
                             <div className="flex items-center space-x-3 mb-1">
                               <FaUserCircle className="text-2xl text-green-600" />
                               <div>
