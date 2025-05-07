@@ -44,7 +44,7 @@ export default function RegisterPage() {
 
   return (
     <div className="p-6 w-[40%] mx-auto bg-white/60 backdrop-blur-md rounded-2xl shadow-md">
-      <h1 className="text-2xl font-bold mb-4">User Registration</h1>
+     <h1 className="text-2xl flex justify-center font-bold mb-4">User Registration</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <input
           {...register('firstName')}
