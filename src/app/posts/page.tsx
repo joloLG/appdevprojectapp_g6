@@ -38,7 +38,7 @@ export default function PostsPage() {
 
   return (
     <div className="p-6 w-[70%] mx-auto bg-white/60 backdrop-blur-md rounded-2xl shadow-md">
-      <h1 className="text-3xl font-bold mb-4">Posts</h1>
+      <h1 className="text-3xl  flex justify-center font-bold mb-4">Posts</h1>
       <ul className="space-y-4">
         {posts.map(post => (
           <li key={post.id} className="border p-4 rounded hover:bg-gray-50 transition">
