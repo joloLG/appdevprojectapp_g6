@@ -31,8 +31,16 @@ export default function DashboardPage() {
     xaxis: {
       categories: ['Users', 'Posts', 'Comments'],
     },
-  };
-
+    plotOptions: {
+      bar: {
+        distributed: true, // Enables per-bar coloring
+      },
+    },
+    colors: ['#FF0000', '#00FF00', '#FFFF00'], // Red, Green, Yellow
+    dataLabels: {
+      enabled: true,
+    },
+  };  
   const chartSeries = [
     {
       name: 'Count',
