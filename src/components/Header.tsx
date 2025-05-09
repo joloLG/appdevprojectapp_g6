@@ -45,7 +45,7 @@ export default function Header() {
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-gray-800"
         >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          {menuOpen ? <X size={24} /> : <Menu size={25} />}
         </button>
 
         {/* Desktop Menu */}
