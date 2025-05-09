@@ -23,10 +23,9 @@
     --foreground: #000000;
   }
 }
-
 body {
   padding-top: 20px;
-  color: #d8d5d5; /* Softer dark for better readability */
+  color: #2e2e2e; /* Softer dark for better readability */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #fbeaff, #e1d5e7, #ffe4ec);
   background-attachment: fixed;
