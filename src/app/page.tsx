@@ -24,7 +24,6 @@ export default function LoginPage() {
       return;
     }
 
-    // Optional: Basic email format check
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(cleanEmail)) {
       setError('Please enter a valid email address.');
@@ -32,7 +31,7 @@ export default function LoginPage() {
       return;
     }
 
-    // Admin credentials
+    // Admin login
     if (cleanEmail === 'admin@admin.com' && cleanPassword === 'admin123') {
       const adminUser = {
         id: 0,
@@ -41,8 +40,9 @@ export default function LoginPage() {
         isAdmin: true,
       };
       localStorage.setItem('user', JSON.stringify(adminUser));
+      window.dispatchEvent(new Event('userChanged')); // Notify header
       setTimeout(() => {
-        router.push('posts');
+        router.push('/posts');
       }, 100);
       return;
     }
@@ -55,6 +55,7 @@ export default function LoginPage() {
 
       if (user && cleanPassword === user.username) {
         localStorage.setItem('user', JSON.stringify({ ...user, isAdmin: false }));
+        window.dispatchEvent(new Event('userChanged')); // Notify header
         router.push('/myposts');
       } else {
         setError('Invalid credentials. Use your email as username and your username as password.');
@@ -102,7 +103,4 @@ export default function LoginPage() {
       </div>
     </div>
   );
-  
-  
-  
 }
