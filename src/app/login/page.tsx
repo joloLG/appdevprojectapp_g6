@@ -28,7 +28,7 @@ export default function LoginPage() {
         isAdmin: true,
       };
       localStorage.setItem('user', JSON.stringify(adminUser));
-
+      window.dispatchEvent(new Event('userChanged')); // Notify header
       // ✅ Delay navigation to ensure localStorage is set
       setTimeout(() => {
         router.push('/posts');
@@ -44,6 +44,7 @@ export default function LoginPage() {
 
     if (user && cleanPassword === user.username) {
       localStorage.setItem('user', JSON.stringify({ ...user, isAdmin: false }));
+      window.dispatchEvent(new Event('userChanged')); // Notify header
       router.push('/myposts');
     } else {
       setError('Invalid credentials. Please check your email and password.');
