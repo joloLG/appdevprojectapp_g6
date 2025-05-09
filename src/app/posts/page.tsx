@@ -34,7 +34,7 @@ export default function PostsPage() {
       });
   }, []);
 
-  if (loading) return <p className="p-6">Loading posts...</p>;
+  if (loading) return <p className="p-6">Loading posts....</p>;
 
   return (
     <div className="p-6 w-[70%] mx-auto bg-white/60 backdrop-blur-md rounded-2xl shadow-md">
