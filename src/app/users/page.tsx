@@ -19,22 +19,22 @@ export default function UsersPage() {
   }, []);
 
   return (
-    <div className="p-4  mx-auto bg-white/60 backdrop-blur-md rounded-2xl shadow-md">
-      <h1 className="text-2xl flex justify-center  font-bold mb-4">User List</h1>
-      <ul className="space-y-2">
+    <div className="max-w-5xl mx-auto p-8">
+      <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Explore Users</h1>
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {users.map(user => (
-          <li
-          key={user.id}
-          className="p-4 border rounded-full hover:bg-gray-100 transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer">
-            <Link href={`/users/${user.id}`}>
-              <div>
-                <p className="font-semibold">{user.name}</p>
-                <p className="text-sm text-gray-600">@{user.username}</p>
-              </div>
-            </Link>
-          </li>
+          <Link key={user.id} href={`/users/${user.id}`}>
+            <div className="p-6 rounded-xl bg-white shadow-lg border border-gray-200 hover:shadow-xl transition duration-300 cursor-pointer group">
+              <p className="text-lg font-semibold text-gray-800 group-hover:text-blue-600 transition">
+                {user.name}
+              </p>
+              <p className="text-sm text-gray-500 group-hover:text-blue-400">@{user.username}</p>
+              <div className="mt-4 w-full h-1 bg-blue-100 group-hover:bg-blue-500 transition-all duration-300 rounded-full" />
+            </div>
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
+
