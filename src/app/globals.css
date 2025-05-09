@@ -26,8 +26,9 @@
 
 body {
   padding-top: 20px;
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  background: #a05075;
+  color: #2e2e2e; /* Softer dark for better readability */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fbeaff, #e1d5e7, #ffe4ec);
+  background-attachment: fixed;
+  background-size: cover;
 }
-
